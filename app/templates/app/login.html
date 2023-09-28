@@ -1,0 +1,10 @@
+{% extends 'app/home.html'%}
+
+{% block content %}
+  <form method='POST'>
+    {%csrf_token%}
+    <input name='username' placeholder='Username'>
+    <input name='password' placeholder='Password'>
+    <button type='submit'>Sign in</button>
+  </form>
+{% endblock %}

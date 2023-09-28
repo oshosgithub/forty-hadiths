@@ -1,0 +1,19 @@
+.container{
+    background-color: aquamarine;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+body{
+    background-color: beige;
+}
+
+.title{
+    background-color: rgb(110, 190, 190);
+    margin: none;
+}
+
+.detail{
+    text-decoration: none;
+}
+

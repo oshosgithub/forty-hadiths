@@ -1,0 +1,14 @@
+{% extends 'app/home.html' %}
+
+{% block content %}
+{% for query in query_set %}
+
+<div class="container">
+        <h3 class="title">{{query.id}}. {{query.title}}</h3>
+           <p class="detail">{{query.detail}}</p><br>
+</div>
+
+{% endfor %}
+
+
+{% endblock %}

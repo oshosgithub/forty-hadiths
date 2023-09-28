@@ -1,0 +1,22 @@
+{% extends 'app/home.html' %}
+
+{% block content %}
+   <div  class="h-200 d-flex align-items-center justify-content-center">
+    <form>
+        {{myfilter.form}}
+        <button type='submit'>Search</button>
+    </form>
+    </div>
+{% for hadith in hadiths %} 
+<div class="container">
+        <h3 class="title">{{hadith.id}}. {{hadith.title}}</h3>
+           <p class="detail">{{hadith.preview}}</p><br>
+           <a class="btn btn-warning" href='{% url "hadith_detail" hadith.id %}'>Show more... </a><br>
+           <a class='btn btn-primary' href='{% url "update" hadith.id %}'>Update</a>
+           <a class='btn btn-danger' href='/delete/{{hadith.id}}'>Delete</a>
+    </div>
+{% endfor %}
+
+
+{% endblock %}
+
